@@ -1,0 +1,69 @@
+{
+	"name": "Event sheet 2",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 323257818288910
+				}
+			],
+			"actions": [
+				{
+					"id": "add-object-to-target",
+					"objectClass": "WatcherEye",
+					"sid": 260921929371809,
+					"behaviorType": "Turret",
+					"parameters": {
+						"target": "Cat"
+					}
+				},
+				{
+					"id": "add-object-to-target",
+					"objectClass": "TurretEye",
+					"sid": 246806483193239,
+					"behaviorType": "Turret",
+					"parameters": {
+						"target": "Cat"
+					}
+				}
+			],
+			"sid": 567072861494963
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-shoot",
+					"objectClass": "TurretEye",
+					"sid": 180453060112399,
+					"behaviorType": "Turret"
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "TurretEye",
+					"sid": 237455577353356,
+					"parameters": {
+						"object": "Bullet",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 392899114026205
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 928167487866288
+		}
+	],
+	"sid": 674151678432048
+}

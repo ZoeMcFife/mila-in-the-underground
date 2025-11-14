@@ -1,0 +1,105 @@
+{
+	"name": "WatcherEye",
+	"plugin-id": "Sprite",
+	"sid": 999215650902884,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Turret",
+			"name": "Turret",
+			"sid": 579272395652316
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6251529,
+						"collisionPoly": {
+							"points": [
+								0.03125,
+								0.609375,
+								0.03125,
+								0.390625,
+								0.078125,
+								0.265625,
+								0.125,
+								0.203125,
+								0.203125,
+								0.125,
+								0.296875,
+								0.0625,
+								0.390625,
+								0.03125,
+								0.609375,
+								0.03125,
+								0.734375,
+								0.078125,
+								0.796875,
+								0.125,
+								0.875,
+								0.203125,
+								0.9375,
+								0.296875,
+								0.96875,
+								0.390625,
+								0.96875,
+								0.609375,
+								0.921875,
+								0.734375,
+								0.875,
+								0.796875,
+								0.796875,
+								0.875,
+								0.703125,
+								0.9375,
+								0.609375,
+								0.96875,
+								0.390625,
+								0.96875,
+								0.265625,
+								0.921875,
+								0.203125,
+								0.875,
+								0.125,
+								0.796875,
+								0.0625,
+								0.703125
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.953125,
+								"y": 0.5
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 461306057123077,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
