@@ -12,6 +12,7 @@ import BulletInstance from "./bullet.js";
 import DangerInstance from "./danger.js";
 import CollectableInstance from "./collectable.js";
 import UiInstance from "./ui.js"
+import FishBagInstance from "./fishbag.js"
 
 runOnStartup(async runtime =>
 {
@@ -54,4 +55,5 @@ function Tick(runtime)
 	runtime.objects.Lava_danger.instances().forEach((lava) => lava.OnTick(runtime));
 	runtime.objects.Fish.instances().forEach((fish) => fish.OnTick(runtime));
 	runtime.objects.Text.instances().forEach((text) => text.OnTick(runtime));
+	runtime.objects.FishBag.instances().forEach((fishBag) => fishBag.OnTick(runtime))
 }
