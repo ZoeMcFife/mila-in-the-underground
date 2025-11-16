@@ -104,7 +104,8 @@
 	},
 	"layouts": {
 		"items": [
-			"Main"
+			"Main",
+			"Test"
 		],
 		"subfolders": []
 	},
