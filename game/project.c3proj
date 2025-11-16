@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 45802,
-	"name": "New project",
+	"name": "Mila in the Underground",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -320,8 +320,8 @@
 	"properties": {
 		"description": "",
 		"version": "1.0.0.0",
-		"autoIncrementVersion": false,
-		"author": "",
+		"autoIncrementVersion": true,
+		"author": "The $!$! Squad",
 		"authorEmail": "",
 		"authorWebsite": "",
 		"appId": "",
