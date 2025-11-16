@@ -73,12 +73,11 @@
 	"uniqueId": "mzgw3oiortt",
 	"objectTypes": {
 		"items": [
-			"Sprite",
-			"Sprite2",
-			"Sprite3",
-			"Sprite4",
-			"Sprite5",
-			"Sprite6",
+			"Brick",
+			"Roof",
+			"Grass",
+			"Dirt",
+			"Stone",
 			"Sprite7",
 			"Sprite8",
 			"Cat",
@@ -105,14 +104,13 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Main"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1",
-			"Event sheet 2"
+			"Main Event Sheet"
 		],
 		"subfolders": []
 	},
