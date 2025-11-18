@@ -26,45 +26,7 @@ export default class FishBagInstance extends globalThis.InstanceType.FishBag
 
     SetSprite()
     {
-        switch (Globals.fishCollected)
-        {
-            case 0:
-                this.setAnimation("0")
-                break;
-            case 1:
-                this.setAnimation("1")
-                break;
-            case 2:
-                this.setAnimation("2")
-                break;
-            case 3:
-                this.setAnimation("3")
-                break;
-            case 4:
-                this.setAnimation("4")
-                break;
-            case 5:
-                this.setAnimation("5")
-                break;
-            case 6:
-                this.setAnimation("6")
-                break;
-            case 7:
-                this.setAnimation("7")
-                break;
-            case 8:
-                this.setAnimation("8")
-                break;
-            case 9:
-                this.setAnimation("9")
-                break;
-            case 10:
-                this.setAnimation("10")
-                break;
-            default:
-                this.setAnimation("10");
-                break;
-        }
+        this.setAnimation(Math.min(Globals.fishCollected, 10).toString());
     }
 
     FollowMovement(runtime)
