@@ -106,7 +106,8 @@
 	"layouts": {
 		"items": [
 			"Main",
-			"Test"
+			"Test",
+			"GameOver"
 		],
 		"subfolders": []
 	},
