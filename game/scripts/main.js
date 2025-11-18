@@ -55,3 +55,4 @@ function Tick(runtime)
 	runtime.objects.Fish.instances().forEach((fish) => fish.OnTick(runtime));
 	runtime.objects.Text.instances().forEach((text) => text.OnTick(runtime));
 }
+
