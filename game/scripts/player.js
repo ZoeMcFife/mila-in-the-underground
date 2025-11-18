@@ -1,4 +1,5 @@
 import Globals from "./globals.js";
+import Level from "./level.js";
 
 export default class PlayerInstance extends globalThis.InstanceType.Cat
 {
@@ -273,8 +274,12 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         this.currentState = "idle";
 
         // add movement
-        this.behaviors.Platform.acceleration = this.initialSpeed
-        this.behaviors.Platform.jumpStrength = this.initialJump
+        this.behaviors.Platform.acceleration = this.initialSpeed;
+        this.behaviors.Platform.jumpStrength = this.initialJump;
+
+        // clear level projectiles
+        Globals.level.ClearAllProjectiles();
     }
+
 
 }
