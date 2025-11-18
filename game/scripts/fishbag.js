@@ -69,7 +69,7 @@ export default class FishBagInstance extends globalThis.InstanceType.FishBag
 
     FollowMovement(runtime)
     {   
-        if (Globals.fishCollected == 0)
+        if (Globals.fishCollected === 0)
         {
             this.setPosition(-100, -100);
             return;
