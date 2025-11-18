@@ -7,7 +7,7 @@ export default class FishBagInstance extends globalThis.InstanceType.FishBag
         super();
 
         // configurable params (tweak these)
-        this._radius = 48;            // orbit radius in px
+        this._radius = 80;            // orbit radius in px
         this._orbitSpeed = Math.PI;   // radians per second (Math.PI = half rotation / sec)
         this._followSpeed = 8.0;      // how quickly the bag catches up (higher = snappier)
         this._spinOffsetDeg = 0;      // rotate the bag by this many degrees (visual spin)
@@ -20,6 +20,61 @@ export default class FishBagInstance extends globalThis.InstanceType.FishBag
 
     OnTick(runtime)
     {
+        this.FollowMovement(runtime);
+        this.SetSprite();
+    }
+
+    SetSprite()
+    {
+        switch (Globals.fishCollected)
+        {
+            case 0:
+                this.setAnimation("0")
+                break;
+            case 1:
+                this.setAnimation("1")
+                break;
+            case 2:
+                this.setAnimation("2")
+                break;
+            case 3:
+                this.setAnimation("3")
+                break;
+            case 4:
+                this.setAnimation("4")
+                break;
+            case 5:
+                this.setAnimation("5")
+                break;
+            case 6:
+                this.setAnimation("6")
+                break;
+            case 7:
+                this.setAnimation("7")
+                break;
+            case 8:
+                this.setAnimation("8")
+                break;
+            case 9:
+                this.setAnimation("9")
+                break;
+            case 10:
+                this.setAnimation("10")
+                break;
+            default:
+                this.setAnimation("10")
+                break;
+        }
+    }
+
+    FollowMovement(runtime)
+    {   
+        if (Globals.fishCollected == 0)
+        {
+            this.setPosition(-100, -100);
+            return;
+        }
+
         const player = Globals.playerInstance;
         if (!player)
             return;
@@ -63,19 +118,7 @@ export default class FishBagInstance extends globalThis.InstanceType.FishBag
         const newX = curX + (targetX - curX) * t;
         const newY = curY + (targetY - curY) * t;
 
-        // set the new position
         this.setPosition(newX, newY);
-
-        console.log(newX, newY);
-
-        // optional: rotate the bag so it visually spins as it orbits
-        /*const angleDeg = (this._angle * 180 / Math.PI) + this._spinOffsetDeg;
-        if (typeof this.setAngle === "function") {
-            this.setAngle(angleDeg);
-        } else {
-            // some runtimes expose .angle
-            this.angle = angleDeg;
-        }*/
     }
 
 }
