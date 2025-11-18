@@ -40,7 +40,6 @@ async function OnBeforeProjectStart(runtime)
 	Globals.playerInstance = runtime.objects.Cat.getFirstInstance();
 	Globals.deathScreenInstance = runtime.objects.DeathScreen.getFirstInstance();
 	Globals.lastCheckpointPosition = runtime.objects.Cat.getFirstInstance().getPosition();
-	Globals.level = new Level(runtime);
 
 	runtime.addEventListener("tick", () => Tick(runtime));
 }
