@@ -62,7 +62,7 @@ export default class FishBagInstance extends globalThis.InstanceType.FishBag
                 this.setAnimation("10")
                 break;
             default:
-                this.setAnimation("10")
+                this.setAnimation("10");
                 break;
         }
     }
