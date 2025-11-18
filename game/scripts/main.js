@@ -11,8 +11,8 @@ import RainInstance from "./rain.js";
 import BulletInstance from "./bullet.js";
 import DangerInstance from "./danger.js";
 import CollectableInstance from "./collectable.js";
-import UiInstance from "./ui.js"
-import FishBagInstance from "./fishbag.js"
+import UiInstance from "./ui.js";
+import FishBagInstance from "./fishbag.js";
 
 runOnStartup(async runtime =>
 {
