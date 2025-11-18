@@ -12,6 +12,9 @@ const Globals =
     /* Death Screen */
     deathScreenInstance: null,
     deathDuration: 4000,
+
+    /* Level */
+    level: null
 };
 
 export default Globals;
