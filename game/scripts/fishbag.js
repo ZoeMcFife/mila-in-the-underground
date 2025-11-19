@@ -22,6 +22,8 @@ export default class FishBagInstance extends globalThis.InstanceType.FishBag
     {
         this.FollowMovement(runtime);
         this.SetSprite();
+
+        this.setSize(64, 64);
     }
 
     SetSprite()
