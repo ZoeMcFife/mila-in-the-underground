@@ -91,7 +91,8 @@
 			"Fish",
 			"Bullet",
 			"TurretEye",
-			"Lava_danger"
+			"Lava_danger",
+			"FishBag"
 		],
 		"subfolders": []
 	},
@@ -105,7 +106,8 @@
 	"layouts": {
 		"items": [
 			"Main",
-			"Test"
+			"Test",
+			"GameOver"
 		],
 		"subfolders": []
 	},
@@ -210,6 +212,14 @@
 					"name": "ui.js",
 					"type": "application/javascript",
 					"sid": 381323276537926,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "fishbag.js",
+					"type": "application/javascript",
+					"sid": 861574069557925,
 					"script-info": {
 						"purpose": "none"
 					}
