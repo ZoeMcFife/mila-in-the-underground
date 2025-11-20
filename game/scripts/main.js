@@ -34,19 +34,28 @@ runOnStartup(async runtime =>
 
 async function OnBeforeProjectStart(runtime)
 {
-	// Code to run just before 'On start of layout' on
-	// the first layout. Loading has finished and initial
-	// instances are created and available to use here.
-
-	Globals.playerInstance = runtime.objects.Cat.getFirstInstance();
-	Globals.deathScreenInstance = runtime.objects.DeathScreen.getFirstInstance();
-	Globals.lastCheckpointPosition = runtime.objects.Cat.getFirstInstance().getPosition();
-
 	runtime.addEventListener("tick", () => Tick(runtime));
 }
 
+let mainStarted = false;
+
 function Tick(runtime)
-{
+{	
+	/* CURSED */
+	if (runtime.layout.name === "Main" && mainStarted === false)
+	{
+		Globals.playerInstance = runtime.objects.Cat.getFirstInstance();
+		Globals.deathScreenInstance = runtime.objects.DeathScreen.getFirstInstance();
+		Globals.lastCheckpointPosition = runtime.objects.Cat.getFirstInstance().getPosition();
+
+		mainStarted = true;
+	}
+
+	if (runtime.layout.name !== "Main")
+	{
+		return;
+	}
+
 	Globals.playerInstance.OnTick(runtime);
 	
 	runtime.objects.CheckPoint.instances().forEach((checkPoint) => checkPoint.OnTick(runtime));

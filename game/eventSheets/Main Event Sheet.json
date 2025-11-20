@@ -103,6 +103,23 @@
 				}
 			],
 			"sid": 488175565636147
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 221670024867708
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "IntroTransistion",
+					"sid": 904909839364625
+				}
+			],
+			"sid": 591116348898262
 		}
 	],
 	"sid": 674151678432048
