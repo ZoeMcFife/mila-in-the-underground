@@ -13,6 +13,7 @@ import DangerInstance from "./danger.js";
 import CollectableInstance from "./collectable.js";
 import UiInstance from "./ui.js";
 import FishBagInstance from "./fishbag.js";
+import TentaclesInstance from "./tentacles.js";
 
 runOnStartup(async runtime =>
 {
@@ -28,6 +29,7 @@ runOnStartup(async runtime =>
 	runtime.objects.Fish.setInstanceClass(CollectableInstance);
 	runtime.objects.Text.setInstanceClass(UiInstance);
 	runtime.objects.FishBag.setInstanceClass(FishBagInstance);
+	runtime.objects.Tentacles.setInstanceClass(TentaclesInstance);
 
 	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
@@ -71,5 +73,6 @@ function Tick(runtime)
 	runtime.objects.Fish.instances().forEach((fish) => fish.OnTick(runtime));
 	runtime.objects.Text.instances().forEach((text) => text.OnTick(runtime));
 	runtime.objects.FishBag.instances().forEach((fishBag) => fishBag.OnTick(runtime));
+	runtime.objects.Tentacles.instances().forEach((ten) => ten.OnTick(runtime));
 }
 
