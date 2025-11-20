@@ -63,6 +63,54 @@
 			"conditions": [],
 			"actions": [],
 			"sid": 928167487866288
+		},
+		{
+			"functionName": "IntroTransistion",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Transistion",
+					"sid": 225580852538797,
+					"parameters": {
+						"animation": "\"Stop\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "Transistion",
+					"sid": 822220048351965,
+					"parameters": {
+						"from": "current-frame"
+					}
+				}
+			],
+			"sid": 367561463875571
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 945520476577812
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "IntroTransistion",
+					"sid": 670615671846058
+				}
+			],
+			"sid": 703577538886021
 		}
 	],
 	"sid": 674151678432048

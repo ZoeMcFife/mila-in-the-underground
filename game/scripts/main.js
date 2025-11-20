@@ -49,6 +49,11 @@ function Tick(runtime)
 		mainStarted = true;
 	}
 
+	if (runtime.layout.name !== "Main")
+	{
+		return;
+	}
+
 	Globals.playerInstance.OnTick(runtime);
 	
 	runtime.objects.CheckPoint.instances().forEach((checkPoint) => checkPoint.OnTick(runtime));

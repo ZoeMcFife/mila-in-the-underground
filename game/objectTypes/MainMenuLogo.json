@@ -20,6 +20,47 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
+						"imageSpriteId": 2201309,
+						"collisionPoly": {
+							"points": [
+								0.97,
+								0.02,
+								0.99,
+								0.12,
+								0.98,
+								0.19,
+								0.92,
+								0.3,
+								0.49,
+								0.13,
+								0.47,
+								0.03
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 977208951469612,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
 						"imageSpriteId": 6192424,
 						"collisionPoly": {
 							"points": [

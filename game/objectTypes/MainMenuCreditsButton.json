@@ -20,6 +20,31 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
+						"imageSpriteId": 152717,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 866706176558147,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 7
+			},
+			{
+				"frames": [
+					{
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
 						"imageSpriteId": 7917672,
 						"useCollisionPoly": true,
 						"duration": 1,
@@ -353,7 +378,7 @@
 					}
 				],
 				"sid": 694981009132247,
-				"name": "Enter",
+				"name": "Start",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
