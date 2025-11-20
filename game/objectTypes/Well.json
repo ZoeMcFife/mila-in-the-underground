@@ -1,0 +1,66 @@
+{
+	"name": "Well",
+	"plugin-id": "Sprite",
+	"sid": 742419443576855,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 320,
+						"height": 384,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1478981,
+						"collisionPoly": {
+							"points": [
+								0.45,
+								0.046875,
+								0.55,
+								0.046875,
+								0.609375,
+								0.06770833333333333,
+								0.9375,
+								0.2864583333333333,
+								0.9625,
+								0.3229166666666667,
+								0.9625,
+								0.4270833333333333,
+								0.89375,
+								1,
+								0.08125,
+								1,
+								0.025,
+								0.4114583333333333,
+								0.025,
+								0.328125,
+								0.271875,
+								0.13802083333333334
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 494560584447402,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

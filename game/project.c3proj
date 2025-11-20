@@ -125,7 +125,13 @@
 			"GameOverButton",
 			"GameOverGhost",
 			"GameOverText",
-			"Tentacles"
+			"Tentacles",
+			"Well",
+			"SkyBG",
+			"Cloud",
+			"UndergroundBG",
+			"SignWell",
+			"CatEars"
 		],
 		"subfolders": []
 	},
@@ -384,7 +390,7 @@
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
-		"fullscreenMode": "letterbox-integer-scale",
+		"fullscreenMode": "letterbox-scale",
 		"fullscreenQuality": "low",
 		"viewportFit": "auto",
 		"backgroundColor": [
@@ -428,5 +434,5 @@
 	},
 	"viewportWidth": 1000,
 	"viewportHeight": 1000,
-	"firstLayout": null
+	"firstLayout": "MainMenu"
 }
