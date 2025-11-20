@@ -124,7 +124,7 @@
 			"GameOverBackground",
 			"GameOverButton",
 			"GameOverGhost",
-			"GameOverText"
+			"GameOverText",
 			"Tentacles"
 		],
 		"subfolders": []
