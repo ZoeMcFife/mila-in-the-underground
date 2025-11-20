@@ -1,0 +1,88 @@
+{
+	"name": "Credits Event Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 804555593492390
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "IntroTransistion",
+					"sid": 787215302555197
+				}
+			],
+			"sid": 107771882862976
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 285221141114605,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 254839668939345,
+					"parameters": {
+						"object": "Fish"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "StartTransistion",
+					"sid": 212252868716515
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 284082295733567,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "1.5",
+						"type": "once",
+						"tag": "\"CreditExitFinished\""
+					}
+				}
+			],
+			"sid": 308628183472341
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 932756762393386,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"CreditExitFinished\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 446826494762127,
+					"parameters": {
+						"layout": "MainMenu"
+					}
+				}
+			],
+			"sid": 955302379947640
+		}
+	],
+	"sid": 909085768186520
+}

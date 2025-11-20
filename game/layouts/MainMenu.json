@@ -57,7 +57,7 @@
 					"type": "MainMenuPlayButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Dorp",
+						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": true
@@ -94,7 +94,7 @@
 					"type": "MainMenuCreditsButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Enter",
+						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -131,7 +131,7 @@
 					"type": "MainMenuExitButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Enter",
+						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -168,7 +168,7 @@
 					"type": "MainMenuLogo",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Start",
+						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -180,6 +180,56 @@
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 899060877675712,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 1000,
+						"height": 1000,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Transistion",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Unstarted",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 9,
+					"sid": 269306139588640,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						},
+						"Anchor": {
+							"properties": {
+								"left-edge": "window-left",
+								"top-edge": "window-top",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 269306139588640,
 						"expanded": true
 					},
 					"showing": true,

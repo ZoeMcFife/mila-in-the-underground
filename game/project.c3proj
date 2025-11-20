@@ -64,6 +64,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Turret",
 			"name": "Turret",
 			"author": "Scirra",
@@ -111,7 +118,8 @@
 			"MainMenuCreditsButton",
 			"MainMenuExitButton",
 			"MainMenuLogo",
-			"Mouse"
+			"Mouse",
+			"Transistion"
 		],
 		"subfolders": []
 	},
@@ -134,7 +142,8 @@
 	"eventSheets": {
 		"items": [
 			"Main Event Sheet",
-			"MainMenu Event Sheet"
+			"MainMenu Event Sheet",
+			"Credits Event Sheet"
 		],
 		"subfolders": []
 	},

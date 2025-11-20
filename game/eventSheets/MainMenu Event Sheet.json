@@ -24,11 +24,18 @@
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 141858929199642,
+					"callFunction": "StartTransistion",
+					"sid": 467587861980125
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 370582091304877,
+					"behaviorType": "Timer",
 					"parameters": {
-						"layout": "Main"
+						"duration": "3",
+						"type": "once",
+						"tag": "\"PlayTransistionFinished\""
 					}
 				}
 			],
@@ -57,11 +64,18 @@
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 912061005138937,
+					"callFunction": "StartTransistion",
+					"sid": 281810443846181
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 832537214423487,
+					"behaviorType": "Timer",
 					"parameters": {
-						"layout": "Credits"
+						"duration": "3",
+						"type": "once",
+						"tag": "\"CreditsTransistionFinished\""
 					}
 				}
 			],
@@ -90,6 +104,119 @@
 			],
 			"actions": [
 				{
+					"callFunction": "StartTransistion",
+					"sid": 322226564764601
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 108254433032180,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "3",
+						"type": "once",
+						"tag": "\"ExitTransistionFinished\""
+					}
+				}
+			],
+			"sid": 717074831149782
+		},
+		{
+			"functionName": "StartTransistion",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Transistion",
+					"sid": 434895063893569,
+					"parameters": {
+						"animation": "\"Start\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "Transistion",
+					"sid": 990904916964524,
+					"parameters": {
+						"from": "current-frame"
+					}
+				}
+			],
+			"sid": 536673842581346
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 362319634064072,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"PlayTransistionFinished\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 841867161073715,
+					"parameters": {
+						"layout": "Main"
+					}
+				}
+			],
+			"sid": 274335853028973
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 221780995943200,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"CreditsTransistionFinished\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 113258677436639,
+					"parameters": {
+						"layout": "Credits"
+					}
+				}
+			],
+			"sid": 544948597802652
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 421168247125118,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"ExitTransistionFinished\""
+					}
+				}
+			],
+			"actions": [
+				{
 					"type": "script",
 					"language": "javascript",
 					"script": [
@@ -97,7 +224,88 @@
 					]
 				}
 			],
-			"sid": 717074831149782
+			"sid": 815956848309642
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 979372106301538
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "IntroTransistion",
+					"sid": 431552953641398
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 928973283556741,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "1.5",
+						"type": "once",
+						"tag": "\"MainMenuIntro\""
+					}
+				}
+			],
+			"sid": 904298603306524
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 410414868094003,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"MainMenuIntro\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "MainMenuCreditsButton",
+					"sid": 174587206478856,
+					"parameters": {
+						"animation": "\"Start\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "MainMenuExitButton",
+					"sid": 698037309090707,
+					"parameters": {
+						"animation": "\"Start\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "MainMenuLogo",
+					"sid": 167330676204257,
+					"parameters": {
+						"animation": "\"Start\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "MainMenuPlayButton",
+					"sid": 177510354982510,
+					"parameters": {
+						"animation": "\"Start\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 264279523226041
 		}
 	],
 	"sid": 893005411903339
