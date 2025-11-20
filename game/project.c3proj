@@ -120,7 +120,8 @@
 			"MainMenuExitButton",
 			"MainMenuCreditsButton",
 			"MainMenuBackground",
-			"Transistion"
+			"Transistion",
+			"Tentacles"
 		],
 		"subfolders": []
 	},
@@ -252,6 +253,14 @@
 					"name": "fishbag.js",
 					"type": "application/javascript",
 					"sid": 861574069557925,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "tentacles.js",
+					"type": "application/javascript",
+					"sid": 991702848739057,
 					"script-info": {
 						"purpose": "none"
 					}
