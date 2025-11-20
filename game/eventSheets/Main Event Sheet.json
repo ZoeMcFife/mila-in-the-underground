@@ -60,40 +60,49 @@
 		},
 		{
 			"eventType": "block",
-			"conditions": [],
-			"actions": [],
-			"sid": 928167487866288
-		},
-		{
-			"functionName": "IntroTransistion",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [
+			"conditions": [
 				{
-					"id": "set-animation",
-					"objectClass": "Transistion",
-					"sid": 225580852538797,
+					"id": "on-timer",
+					"objectClass": "Bullet",
+					"sid": 812263440610967,
+					"behaviorType": "Timer",
 					"parameters": {
-						"animation": "\"Stop\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "start-animation",
-					"objectClass": "Transistion",
-					"sid": 822220048351965,
-					"parameters": {
-						"from": "current-frame"
+						"tag": "\"Expire\""
 					}
 				}
 			],
-			"sid": 367561463875571
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Bullet",
+					"sid": 158653742524930
+				}
+			],
+			"sid": 928167487866288
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Bullet",
+					"sid": 165028049645473
+				}
+			],
+			"actions": [
+				{
+					"id": "start-timer",
+					"objectClass": "Bullet",
+					"sid": 480666156228685,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "2",
+						"type": "once",
+						"tag": "\"Expire\""
+					}
+				}
+			],
+			"sid": 488175565636147
 		},
 		{
 			"eventType": "block",
@@ -101,16 +110,16 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 945520476577812
+					"sid": 221670024867708
 				}
 			],
 			"actions": [
 				{
 					"callFunction": "IntroTransistion",
-					"sid": 670615671846058
+					"sid": 904909839364625
 				}
 			],
-			"sid": 703577538886021
+			"sid": 591116348898262
 		}
 	],
 	"sid": 674151678432048

@@ -113,12 +113,13 @@
 			"Bullet",
 			"TurretEye",
 			"Lava_danger",
-			"MainMenuBackground",
-			"MainMenuPlayButton",
-			"MainMenuCreditsButton",
-			"MainMenuExitButton",
-			"MainMenuLogo",
+			"FishBag",
 			"Mouse",
+			"MainMenuPlayButton",
+			"MainMenuLogo",
+			"MainMenuExitButton",
+			"MainMenuCreditsButton",
+			"MainMenuBackground",
 			"Transistion"
 		],
 		"subfolders": []
@@ -134,8 +135,9 @@
 		"items": [
 			"Main",
 			"Test",
-			"MainMenu",
-			"Credits"
+			"GameOver",
+			"Credits",
+			"MainMenu"
 		],
 		"subfolders": []
 	},
@@ -242,6 +244,14 @@
 					"name": "ui.js",
 					"type": "application/javascript",
 					"sid": 381323276537926,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "fishbag.js",
+					"type": "application/javascript",
+					"sid": 861574069557925,
 					"script-info": {
 						"purpose": "none"
 					}

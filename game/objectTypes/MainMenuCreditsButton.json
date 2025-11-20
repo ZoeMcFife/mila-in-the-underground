@@ -1,7 +1,7 @@
 {
 	"name": "MainMenuCreditsButton",
 	"plugin-id": "Sprite",
-	"sid": 712124342878958,
+	"sid": 733230789855199,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -20,13 +20,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 152717,
+						"imageSpriteId": 3945282,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 866706176558147,
+				"sid": 730306963212531,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
@@ -45,7 +45,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7917672,
+						"imageSpriteId": 2893818,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -59,7 +59,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8913001,
+						"imageSpriteId": 9133447,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -87,7 +87,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9223600,
+						"imageSpriteId": 3094669,
 						"collisionPoly": {
 							"points": [
 								0.19,
@@ -113,7 +113,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 2204834,
+						"imageSpriteId": 9567455,
 						"collisionPoly": {
 							"points": [
 								0.38,
@@ -149,7 +149,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5989000,
+						"imageSpriteId": 3298971,
 						"collisionPoly": {
 							"points": [
 								0.66,
@@ -173,7 +173,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5020801,
+						"imageSpriteId": 7637964,
 						"collisionPoly": {
 							"points": [
 								0.7,
@@ -203,7 +203,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7133560,
+						"imageSpriteId": 6441512,
 						"collisionPoly": {
 							"points": [
 								0.82,
@@ -237,7 +237,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8497834,
+						"imageSpriteId": 4056934,
 						"collisionPoly": {
 							"points": [
 								0.61,
@@ -261,7 +261,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8382676,
+						"imageSpriteId": 4927624,
 						"collisionPoly": {
 							"points": [
 								0.64,
@@ -287,7 +287,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7187587,
+						"imageSpriteId": 4277593,
 						"collisionPoly": {
 							"points": [
 								0.86,
@@ -317,7 +317,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7744163,
+						"imageSpriteId": 5695335,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -331,7 +331,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 2601419,
+						"imageSpriteId": 9531399,
 						"collisionPoly": {
 							"points": [
 								0.92,
@@ -359,7 +359,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7219499,
+						"imageSpriteId": 5978121,
 						"collisionPoly": {
 							"points": [
 								0.6,
@@ -377,7 +377,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 694981009132247,
+				"sid": 410932233717160,
 				"name": "Start",
 				"isLooping": false,
 				"isPingPong": false,

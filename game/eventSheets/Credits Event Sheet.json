@@ -7,16 +7,16 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 804555593492390
+					"sid": 999768188081190
 				}
 			],
 			"actions": [
 				{
 					"callFunction": "IntroTransistion",
-					"sid": 787215302555197
+					"sid": 389625396634088
 				}
 			],
-			"sid": 107771882862976
+			"sid": 749070010913931
 		},
 		{
 			"eventType": "block",
@@ -24,7 +24,7 @@
 				{
 					"id": "on-click",
 					"objectClass": "Mouse",
-					"sid": 285221141114605,
+					"sid": 739014987766327,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked"
@@ -33,7 +33,7 @@
 				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Mouse",
-					"sid": 254839668939345,
+					"sid": 672671756353136,
 					"parameters": {
 						"object": "Fish"
 					}
@@ -42,12 +42,12 @@
 			"actions": [
 				{
 					"callFunction": "StartTransistion",
-					"sid": 212252868716515
+					"sid": 552552526609120
 				},
 				{
 					"id": "start-timer",
 					"objectClass": "Transistion",
-					"sid": 284082295733567,
+					"sid": 135698145999512,
 					"behaviorType": "Timer",
 					"parameters": {
 						"duration": "1.5",
@@ -56,7 +56,7 @@
 					}
 				}
 			],
-			"sid": 308628183472341
+			"sid": 411266086270045
 		},
 		{
 			"eventType": "block",
@@ -64,7 +64,7 @@
 				{
 					"id": "on-timer",
 					"objectClass": "Transistion",
-					"sid": 932756762393386,
+					"sid": 944867749022728,
 					"behaviorType": "Timer",
 					"parameters": {
 						"tag": "\"CreditExitFinished\""
@@ -75,14 +75,14 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 446826494762127,
+					"sid": 261583480869797,
 					"parameters": {
 						"layout": "MainMenu"
 					}
 				}
 			],
-			"sid": 955302379947640
+			"sid": 657512473649292
 		}
 	],
-	"sid": 909085768186520
+	"sid": 686231110149995
 }
