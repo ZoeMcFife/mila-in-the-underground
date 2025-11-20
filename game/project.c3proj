@@ -15,6 +15,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -24,6 +31,13 @@
 			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -45,6 +59,13 @@
 			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -91,7 +112,26 @@
 			"Fish",
 			"Bullet",
 			"TurretEye",
-			"Lava_danger"
+			"Lava_danger",
+			"FishBag",
+			"Mouse",
+			"MainMenuPlayButton",
+			"MainMenuLogo",
+			"MainMenuExitButton",
+			"MainMenuCreditsButton",
+			"MainMenuBackground",
+			"Transistion",
+			"GameOverBackground",
+			"GameOverButton",
+			"GameOverGhost",
+			"GameOverText",
+			"Tentacles",
+			"Well",
+			"SkyBG",
+			"Cloud",
+			"UndergroundBG",
+			"SignWell",
+			"CatEars"
 		],
 		"subfolders": []
 	},
@@ -105,13 +145,19 @@
 	"layouts": {
 		"items": [
 			"Main",
-			"Test"
+			"Test",
+			"GameOver",
+			"Credits",
+			"MainMenu"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Main Event Sheet"
+			"Main Event Sheet",
+			"MainMenu Event Sheet",
+			"Credits Event Sheet",
+			"Game Over Event Sheet"
 		],
 		"subfolders": []
 	},
@@ -210,6 +256,22 @@
 					"name": "ui.js",
 					"type": "application/javascript",
 					"sid": 381323276537926,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "fishbag.js",
+					"type": "application/javascript",
+					"sid": 861574069557925,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "tentacles.js",
+					"type": "application/javascript",
+					"sid": 991702848739057,
 					"script-info": {
 						"purpose": "none"
 					}
@@ -328,7 +390,7 @@
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
-		"fullscreenMode": "letterbox-integer-scale",
+		"fullscreenMode": "letterbox-scale",
 		"fullscreenQuality": "low",
 		"viewportFit": "auto",
 		"backgroundColor": [
@@ -370,7 +432,7 @@
 		"exportFileStructure": "folders",
 		"scriptsType": "module"
 	},
-	"viewportWidth": 1080,
-	"viewportHeight": 1080,
-	"firstLayout": null
+	"viewportWidth": 1000,
+	"viewportHeight": 1000,
+	"firstLayout": "MainMenu"
 }

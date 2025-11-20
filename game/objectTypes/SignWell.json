@@ -1,0 +1,66 @@
+{
+	"name": "SignWell",
+	"plugin-id": "Sprite",
+	"sid": 854383696223191,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8626877,
+						"collisionPoly": {
+							"points": [
+								0.1875,
+								0.078125,
+								0.6875,
+								0.078125,
+								0.921875,
+								0.109375,
+								0.984375,
+								0.140625,
+								0.984375,
+								0.578125,
+								0.96875,
+								0.71875,
+								0.9375,
+								0.75,
+								0.5625,
+								1,
+								0.46875,
+								1,
+								0.078125,
+								0.65625,
+								0.09375,
+								0.09375
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 320184026809142,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

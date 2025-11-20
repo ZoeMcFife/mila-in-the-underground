@@ -1,0 +1,23 @@
+{
+	"name": "SkyBG",
+	"plugin-id": "TiledBg",
+	"sid": 128718459010152,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 100,
+		"height": 100,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 4863438,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

@@ -1,0 +1,199 @@
+{
+	"name": "Game Over Event Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 502561883606933
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "IntroTransistion",
+					"sid": 735249193714344
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 357089085072245,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "4",
+						"type": "once",
+						"tag": "\"GhostTimer\""
+					}
+				}
+			],
+			"sid": 341262714637265
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 801802577781571,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"GhostTimer\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "GameOverGhost",
+					"sid": 433770307971831,
+					"parameters": {
+						"animation": "\"Start\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 240792143450658,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "2.5",
+						"type": "once",
+						"tag": "\"TextTimer\""
+					}
+				}
+			],
+			"sid": 226621630552224
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 214091909902063,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"TextTimer\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "GameOverText",
+					"sid": 619579010490162,
+					"parameters": {
+						"animation": "\"Start\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 265447923912027,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "3",
+						"type": "once",
+						"tag": "\"ButtonTimer\""
+					}
+				}
+			],
+			"sid": 490442563484927
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 711231785525689,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"ButtonTimer\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "GameOverButton",
+					"sid": 543233756490807,
+					"parameters": {
+						"animation": "\"Start\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 433468107447057
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 332492934993765,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 732382594611025,
+					"parameters": {
+						"object": "GameOverButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "StartTransistion",
+					"sid": 770705145513361
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 318817687378108,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "3",
+						"type": "once",
+						"tag": "\"GameOverTryAgainTimer\""
+					}
+				}
+			],
+			"sid": 365106109402809
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 889585284743256,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"GameOverTryAgainTimer\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 238293603088010,
+					"parameters": {
+						"layout": "MainMenu"
+					}
+				}
+			],
+			"sid": 356981145893177
+		}
+	],
+	"sid": 511001467192202
+}

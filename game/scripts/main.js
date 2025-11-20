@@ -11,7 +11,9 @@ import RainInstance from "./rain.js";
 import BulletInstance from "./bullet.js";
 import DangerInstance from "./danger.js";
 import CollectableInstance from "./collectable.js";
-import UiInstance from "./ui.js"
+import UiInstance from "./ui.js";
+import FishBagInstance from "./fishbag.js";
+import TentaclesInstance from "./tentacles.js";
 
 runOnStartup(async runtime =>
 {
@@ -26,25 +28,41 @@ runOnStartup(async runtime =>
 	runtime.objects.Lava_danger.setInstanceClass(DangerInstance);
 	runtime.objects.Fish.setInstanceClass(CollectableInstance);
 	runtime.objects.Text.setInstanceClass(UiInstance);
+	runtime.objects.FishBag.setInstanceClass(FishBagInstance);
+	runtime.objects.Tentacles.setInstanceClass(TentaclesInstance);
 
 	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
 
 async function OnBeforeProjectStart(runtime)
 {
-	// Code to run just before 'On start of layout' on
-	// the first layout. Loading has finished and initial
-	// instances are created and available to use here.
-
-	Globals.playerInstance = runtime.objects.Cat.getFirstInstance();
-	Globals.deathScreenInstance = runtime.objects.DeathScreen.getFirstInstance();
-	Globals.lastCheckpointPosition = runtime.objects.Cat.getFirstInstance().getPosition();
-
 	runtime.addEventListener("tick", () => Tick(runtime));
 }
 
+let mainStarted = false;
+
 function Tick(runtime)
-{
+{	
+	/* CURSED */
+	if (runtime.layout.name === "Main" && mainStarted === false)
+	{
+		Globals.playerInstance = runtime.objects.Cat.getFirstInstance();
+		Globals.deathScreenInstance = runtime.objects.DeathScreen.getFirstInstance();
+		Globals.lastCheckpointPosition = runtime.objects.Cat.getFirstInstance().getPosition();
+
+		mainStarted = true;
+	}
+
+	if (runtime.layout.name === "GameOver")
+	{
+		mainStarted = false;
+	}
+
+	if (runtime.layout.name !== "Main")
+	{
+		return;
+	}
+
 	Globals.playerInstance.OnTick(runtime);
 	
 	runtime.objects.CheckPoint.instances().forEach((checkPoint) => checkPoint.OnTick(runtime));
@@ -54,4 +72,7 @@ function Tick(runtime)
 	runtime.objects.Lava_danger.instances().forEach((lava) => lava.OnTick(runtime));
 	runtime.objects.Fish.instances().forEach((fish) => fish.OnTick(runtime));
 	runtime.objects.Text.instances().forEach((text) => text.OnTick(runtime));
+	runtime.objects.FishBag.instances().forEach((fishBag) => fishBag.OnTick(runtime));
+	runtime.objects.Tentacles.instances().forEach((ten) => ten.OnTick(runtime));
 }
+

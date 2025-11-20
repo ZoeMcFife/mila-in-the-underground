@@ -60,9 +60,66 @@
 		},
 		{
 			"eventType": "block",
-			"conditions": [],
-			"actions": [],
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Bullet",
+					"sid": 812263440610967,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"Expire\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Bullet",
+					"sid": 158653742524930
+				}
+			],
 			"sid": 928167487866288
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Bullet",
+					"sid": 165028049645473
+				}
+			],
+			"actions": [
+				{
+					"id": "start-timer",
+					"objectClass": "Bullet",
+					"sid": 480666156228685,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "2",
+						"type": "once",
+						"tag": "\"Expire\""
+					}
+				}
+			],
+			"sid": 488175565636147
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 221670024867708
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "IntroTransistion",
+					"sid": 904909839364625
+				}
+			],
+			"sid": 591116348898262
 		}
 	],
 	"sid": 674151678432048

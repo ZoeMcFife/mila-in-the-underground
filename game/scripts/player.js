@@ -14,8 +14,12 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         this.protectedLeft = false;
         this.protectedRight = false;
 
-        this.initialSpeed = this.behaviors.Platform.acceleration
-        this.initialJump = this.behaviors.Platform.jumpStrength
+        this.initialSpeed = this.behaviors.Platform.acceleration;
+        this.initialJump = this.behaviors.Platform.jumpStrength;
+
+        this.noLivesLeft = false;
+
+        this.fullyDead = false;
 
         this.Directions = 
         {
@@ -27,11 +31,21 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
 
     }
 
-    OnTick(runtime)
+    async OnTick(runtime)
     {
         const keyboard = runtime.keyboard;
 
         this.PlayerAnimations(keyboard);
+
+        if (this.noLivesLeft && this.fullyDead === false)
+        {   
+            console.log("this should only run once");
+            Globals.umbrellaUnlocked = false;
+            this.fullyDead = true;
+            runtime.objects.Transistion.getFirstInstance().setAnimation("Start");
+            await new Promise(resolve => setTimeout(resolve, 5000));
+            runtime.goToLayout("GameOver");
+        }
     }
 
     PlayerAnimations(keyboard)
@@ -254,9 +268,20 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         // remove movement
         this.behaviors.Platform.acceleration = 0;
         this.behaviors.Platform.jumpStrength = 0;
+        
+        if (Globals.fishCollected === 0)
+        {
+            this.noLivesLeft = true;
+            return;
+        }
+
+        if (Globals.fishCollected > 0)
+        {
+            Globals.fishCollected--;
+        }
 
         Globals.deathScreenInstance.PlayDeathAnimation();
-
+        
         await new Promise(resolve => setTimeout(resolve, Globals.deathDuration));
 
         Globals.deathScreenInstance.PlayRespawnAnimation();
