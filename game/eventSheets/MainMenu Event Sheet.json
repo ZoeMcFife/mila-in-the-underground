@@ -1,0 +1,104 @@
+{
+	"name": "MainMenu Event Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 355643361429769,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 740629390531805,
+					"parameters": {
+						"object": "MainMenuPlayButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 141858929199642,
+					"parameters": {
+						"layout": "Main"
+					}
+				}
+			],
+			"sid": 494657658024019
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 176529697197103,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 981784959383182,
+					"parameters": {
+						"object": "MainMenuCreditsButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 912061005138937,
+					"parameters": {
+						"layout": "Credits"
+					}
+				}
+			],
+			"sid": 950344248028734
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 697488670721621,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 106560292179240,
+					"parameters": {
+						"object": "MainMenuExitButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"language": "javascript",
+					"script": [
+						"window.close();"
+					]
+				}
+			],
+			"sid": 717074831149782
+		}
+	],
+	"sid": 893005411903339
+}

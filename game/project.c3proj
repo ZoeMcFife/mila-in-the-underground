@@ -15,6 +15,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -102,7 +109,9 @@
 			"MainMenuBackground",
 			"MainMenuPlayButton",
 			"MainMenuCreditsButton",
-			"MainMenuExitButton"
+			"MainMenuExitButton",
+			"MainMenuLogo",
+			"Mouse"
 		],
 		"subfolders": []
 	},
@@ -117,13 +126,15 @@
 		"items": [
 			"Main",
 			"Test",
-			"MainMenu"
+			"MainMenu",
+			"Credits"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Main Event Sheet"
+			"Main Event Sheet",
+			"MainMenu Event Sheet"
 		],
 		"subfolders": []
 	},
