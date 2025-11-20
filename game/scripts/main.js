@@ -35,6 +35,10 @@ async function OnBeforeProjectStart(runtime)
 	// Code to run just before 'On start of layout' on
 	// the first layout. Loading has finished and initial
 	// instances are created and available to use here.
+	if (runtime.objects.Cat.getFirstInstance() == null)
+	{
+		return;
+	}
 
 	Globals.playerInstance = runtime.objects.Cat.getFirstInstance();
 	Globals.deathScreenInstance = runtime.objects.DeathScreen.getFirstInstance();
@@ -45,6 +49,11 @@ async function OnBeforeProjectStart(runtime)
 
 function Tick(runtime)
 {
+	if (runtime.objects.Cat.getFirstInstance() == null)
+	{
+		return;
+	}
+
 	Globals.playerInstance.OnTick(runtime);
 	
 	runtime.objects.CheckPoint.instances().forEach((checkPoint) => checkPoint.OnTick(runtime));
