@@ -261,11 +261,6 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         {
             return;
         }
-        
-        if (Globals.fishCollected > 0)
-        {
-            Globals.fishCollected--;
-        }
 
         this.dead = true;
 
@@ -277,6 +272,11 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         {
             this.noLivesLeft = true;
             return;
+        }
+
+        if (Globals.fishCollected > 0)
+        {
+            Globals.fishCollected--;
         }
 
         Globals.deathScreenInstance.PlayDeathAnimation();
