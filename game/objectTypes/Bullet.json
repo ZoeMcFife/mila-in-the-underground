@@ -10,11 +10,6 @@
 			"behaviorId": "Bullet",
 			"name": "Bullet",
 			"sid": 941145848102178
-		},
-		{
-			"behaviorId": "Timer",
-			"name": "Timer",
-			"sid": 755616167654325
 		}
 	],
 	"effectTypes": [],

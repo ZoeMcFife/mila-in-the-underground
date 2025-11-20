@@ -19,5 +19,5 @@ export default class BulletInstance extends globalThis.InstanceType.Bullet
             Globals.playerInstance.TakeDamage(this, false);
             this.destroy();
         }
-    }
+    }r
 }

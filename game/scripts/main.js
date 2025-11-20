@@ -11,8 +11,7 @@ import RainInstance from "./rain.js";
 import BulletInstance from "./bullet.js";
 import DangerInstance from "./danger.js";
 import CollectableInstance from "./collectable.js";
-import UiInstance from "./ui.js";
-import FishBagInstance from "./fishbag.js";
+import UiInstance from "./ui.js"
 
 runOnStartup(async runtime =>
 {
@@ -27,7 +26,6 @@ runOnStartup(async runtime =>
 	runtime.objects.Lava_danger.setInstanceClass(DangerInstance);
 	runtime.objects.Fish.setInstanceClass(CollectableInstance);
 	runtime.objects.Text.setInstanceClass(UiInstance);
-	runtime.objects.FishBag.setInstanceClass(FishBagInstance);
 
 	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
@@ -65,6 +63,4 @@ function Tick(runtime)
 	runtime.objects.Lava_danger.instances().forEach((lava) => lava.OnTick(runtime));
 	runtime.objects.Fish.instances().forEach((fish) => fish.OnTick(runtime));
 	runtime.objects.Text.instances().forEach((text) => text.OnTick(runtime));
-	runtime.objects.FishBag.instances().forEach((fishBag) => fishBag.OnTick(runtime));
 }
-
