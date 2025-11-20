@@ -124,7 +124,14 @@
 			"GameOverBackground",
 			"GameOverButton",
 			"GameOverGhost",
-			"GameOverText"
+			"GameOverText",
+			"Tentacles",
+			"Well",
+			"SkyBG",
+			"Cloud",
+			"UndergroundBG",
+			"SignWell",
+			"CatEars"
 		],
 		"subfolders": []
 	},
@@ -260,6 +267,14 @@
 					"script-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "tentacles.js",
+					"type": "application/javascript",
+					"sid": 991702848739057,
+					"script-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -375,7 +390,7 @@
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
-		"fullscreenMode": "letterbox-integer-scale",
+		"fullscreenMode": "letterbox-scale",
 		"fullscreenQuality": "low",
 		"viewportFit": "auto",
 		"backgroundColor": [
@@ -419,5 +434,5 @@
 	},
 	"viewportWidth": 1000,
 	"viewportHeight": 1000,
-	"firstLayout": null
+	"firstLayout": "MainMenu"
 }

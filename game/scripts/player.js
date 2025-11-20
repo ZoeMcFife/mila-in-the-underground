@@ -40,6 +40,7 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         if (this.noLivesLeft && this.fullyDead === false)
         {   
             console.log("this should only run once");
+            Globals.umbrellaUnlocked = false;
             this.fullyDead = true;
             runtime.objects.Transistion.getFirstInstance().setAnimation("Start");
             await new Promise(resolve => setTimeout(resolve, 5000));
