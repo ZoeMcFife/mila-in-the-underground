@@ -15,6 +15,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -24,6 +31,13 @@
 			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -91,7 +105,13 @@
 			"Fish",
 			"Bullet",
 			"TurretEye",
-			"Lava_danger"
+			"Lava_danger",
+			"MainMenuBackground",
+			"MainMenuPlayButton",
+			"MainMenuCreditsButton",
+			"MainMenuExitButton",
+			"MainMenuLogo",
+			"Mouse"
 		],
 		"subfolders": []
 	},
@@ -105,13 +125,16 @@
 	"layouts": {
 		"items": [
 			"Main",
-			"Test"
+			"Test",
+			"MainMenu",
+			"Credits"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Main Event Sheet"
+			"Main Event Sheet",
+			"MainMenu Event Sheet"
 		],
 		"subfolders": []
 	},
@@ -370,7 +393,7 @@
 		"exportFileStructure": "folders",
 		"scriptsType": "module"
 	},
-	"viewportWidth": 1080,
-	"viewportHeight": 1080,
+	"viewportWidth": 1000,
+	"viewportHeight": 1000,
 	"firstLayout": null
 }
