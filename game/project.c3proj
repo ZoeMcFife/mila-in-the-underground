@@ -120,7 +120,11 @@
 			"MainMenuExitButton",
 			"MainMenuCreditsButton",
 			"MainMenuBackground",
-			"Transistion"
+			"Transistion",
+			"GameOverBackground",
+			"GameOverButton",
+			"GameOverGhost",
+			"GameOverText"
 		],
 		"subfolders": []
 	},
@@ -145,7 +149,8 @@
 		"items": [
 			"Main Event Sheet",
 			"MainMenu Event Sheet",
-			"Credits Event Sheet"
+			"Credits Event Sheet",
+			"Game Over Event Sheet"
 		],
 		"subfolders": []
 	},

@@ -19,6 +19,8 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
 
         this.noLivesLeft = false;
 
+        this.fullyDead = false;
+
         this.Directions = 
         {
             LEFT: 0,
@@ -35,9 +37,12 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
 
         this.PlayerAnimations(keyboard);
 
-        if (this.noLivesLeft)
+        if (this.noLivesLeft && this.fullyDead === false)
         {   
-            await new Promise(resolve => setTimeout(resolve, Globals.deathDuration));
+            console.log("this should only run once");
+            this.fullyDead = true;
+            runtime.objects.Transistion.getFirstInstance().setAnimation("Start");
+            await new Promise(resolve => setTimeout(resolve, 5000));
             runtime.goToLayout("GameOver");
         }
     }
@@ -256,24 +261,25 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         {
             return;
         }
-        
-        if (Globals.fishCollected > 0)
-        {
-            Globals.fishCollected--;
-        }
 
         this.dead = true;
 
         // remove movement
         this.behaviors.Platform.acceleration = 0;
         this.behaviors.Platform.jumpStrength = 0;
-
-        Globals.deathScreenInstance.PlayDeathAnimation();
         
         if (Globals.fishCollected === 0)
         {
             this.noLivesLeft = true;
+            return;
         }
+
+        if (Globals.fishCollected > 0)
+        {
+            Globals.fishCollected--;
+        }
+
+        Globals.deathScreenInstance.PlayDeathAnimation();
         
         await new Promise(resolve => setTimeout(resolve, Globals.deathDuration));
 

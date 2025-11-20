@@ -51,6 +51,11 @@ function Tick(runtime)
 		mainStarted = true;
 	}
 
+	if (runtime.layout.name === "GameOver")
+	{
+		mainStarted = false;
+	}
+
 	if (runtime.layout.name !== "Main")
 	{
 		return;
