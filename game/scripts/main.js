@@ -14,6 +14,7 @@ import CollectableInstance from "./collectable.js";
 import UiInstance from "./ui.js";
 import FishBagInstance from "./fishbag.js";
 import TentaclesInstance from "./tentacles.js";
+import UmbrellaShieldInstance from "./umbrellaShield.js";
 
 runOnStartup(async runtime =>
 {
@@ -30,6 +31,7 @@ runOnStartup(async runtime =>
 	runtime.objects.Text.setInstanceClass(UiInstance);
 	runtime.objects.FishBag.setInstanceClass(FishBagInstance);
 	runtime.objects.Tentacles.setInstanceClass(TentaclesInstance);
+	runtime.objects.UmbrellaShield.setInstanceClass(UmbrellaShieldInstance);
 
 	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
@@ -49,6 +51,7 @@ function Tick(runtime)
 		Globals.playerInstance = runtime.objects.Cat.getFirstInstance();
 		Globals.deathScreenInstance = runtime.objects.DeathScreen.getFirstInstance();
 		Globals.lastCheckpointPosition = runtime.objects.Cat.getFirstInstance().getPosition();
+		Globals.umbrellaShieldInstance = runtime.objects.UmbrellaShield.getFirstInstance();
 
 		mainStarted = true;
 	}
@@ -74,5 +77,6 @@ function Tick(runtime)
 	runtime.objects.Text.instances().forEach((text) => text.OnTick(runtime));
 	runtime.objects.FishBag.instances().forEach((fishBag) => fishBag.OnTick(runtime));
 	runtime.objects.Tentacles.instances().forEach((ten) => ten.OnTick(runtime));
+	runtime.objects.UmbrellaShield.instances().forEach((umbShield) => umbShield.OnTick(runtime));
 }
 

@@ -6,6 +6,7 @@ const Globals =
     /* Player */
     playerInstance: null,
     umbrellaUnlocked: false,
+    umbrellaShieldInstance: null,
     lastCheckpointPosition: null,
 
 

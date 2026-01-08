@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 45802,
+	"savedWithRelease": 46600,
 	"name": "Mila in the Underground",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -131,7 +131,8 @@
 			"Cloud",
 			"UndergroundBG",
 			"SignWell",
-			"CatEars"
+			"CatEars",
+			"UmbrellaShield"
 		],
 		"subfolders": []
 	},
@@ -272,6 +273,14 @@
 					"name": "tentacles.js",
 					"type": "application/javascript",
 					"sid": 991702848739057,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "umbrellaShield.js",
+					"type": "application/javascript",
+					"sid": 648879244269333,
 					"script-info": {
 						"purpose": "none"
 					}
