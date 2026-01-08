@@ -96,7 +96,7 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
             {
                 this.protectedLeft = true;
             }
-            else
+            else 
             {
                 this.protectedRight = true;
             }
@@ -135,15 +135,18 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
             Globals.umbrellaShieldInstance.StopFollowingCat();
         }
 
-        if (this.protectedUp)
+
+        console.log(animName);
+
+        if (newState === "protect_up" || newState === "protect_up_walk")
         {
             Globals.umbrellaShieldInstance.RotateUp()
         }
-        else if (this.protectedLeft)
+        else if (animName === "protect_left" || animName === "protect_walk_left")
         {
             Globals.umbrellaShieldInstance.RotateLeft()
         }
-        else if (this.protectedRight)
+        else if (animName === "protect_right" || animName === "protect_walk_right")
         {
             Globals.umbrellaShieldInstance.RotateRight()
         }
@@ -217,40 +220,6 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         this.dead = false; 
     }
 
-    CheckDamageDirection(attacker)
-    {
-        const [playerX, playerY] = this.getPosition();
-        const [attackerX, attackerY] = attacker.getPosition();
-        this.OnDeath();
-
-        // Adjust for origin offset if needed
-        const playerCenterY = playerY - 64; // adjust if origin at (0,64)
-        
-        const dx = attackerX - playerX;
-        const dy = attackerY - playerCenterY;
-
-        // atan2 gives angle in radians; convert to degrees
-        let angle = Math.atan2(dy, dx) * 180 / Math.PI;
-
-        // Remap so 0° = UP, clockwise
-        //angle += 90;
-        if (angle > 180) angle -= 360;  // keep in [-180,180]
-
-        console.log(angle)
-
-        let up_angle = 25;
-        let right_angle = 180 - up_angle;
-
-        // Map angle to direction
-        if (angle > -up_angle && angle <= up_angle)       // UP
-            return this.Directions.UP;
-        else if (angle > up_angle && angle <= right_angle)  // RIGHT
-            return this.Directions.RIGHT;
-        else if (angle <= -up_angle && angle > -right_angle) // LEFT
-            return this.Directions.LEFT;
-        else                                  // DOWN
-            return this.Directions.DOWN;
-    }
 
     Respawn()
     {

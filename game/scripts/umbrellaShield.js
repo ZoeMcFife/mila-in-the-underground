@@ -9,14 +9,14 @@ export default class UmbrellaShieldInstance extends globalThis.InstanceType.Umbr
 
     OnTick(runtime)
     {
-        console.log(this.getPosition());
+        
     }
 
     FollowCat()
     {
         const cat = Globals.playerInstance;
-
-        this.setPosition(cat.getPosition[0], cat.getPosition[1]);
+        
+        this.setPosition(cat.getPosition()[0] + 32, cat.getPosition()[1] - 32);
     }
 
     StopFollowingCat()
@@ -31,11 +31,11 @@ export default class UmbrellaShieldInstance extends globalThis.InstanceType.Umbr
 
     RotateLeft()
     {
-        this.angle = -90;
+        this.angle = 80;
     }
 
     RotateRight()
     {
-        this.angle = 90;
+        this.angle = -80;
     }
 }

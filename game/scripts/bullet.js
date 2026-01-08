@@ -19,5 +19,10 @@ export default class BulletInstance extends globalThis.InstanceType.Bullet
             Globals.playerInstance.TakeDamage(this, false);
             this.destroy();
         }
+
+        if (this.testOverlap(Globals.umbrellaShieldInstance))
+        {
+            this.destroy();
+        }
     }
 }
