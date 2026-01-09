@@ -154708,8 +154708,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 7296,
-						"y": 5632,
+						"x": 1472,
+						"y": 2816,
 						"width": 64,
 						"height": 64,
 						"originX": 0,
@@ -583930,43 +583930,6 @@
 					}
 				},
 				{
-					"type": "KeyCollectable",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 131,
-					"sid": 597023499767915,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 597023499767915,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 7232,
-						"y": 5504,
-						"width": 64,
-						"height": 64,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "BossTurret",
 					"properties": {
 						"initially-visible": true,
@@ -584445,43 +584408,6 @@
 					"world": {
 						"x": 7808,
 						"y": 5120,
-						"width": 64,
-						"height": 64,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Umbrella",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 136,
-					"sid": 295445812101889,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 295445812101889,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 7360,
-						"y": 5568,
 						"width": 64,
 						"height": 64,
 						"originX": 0,

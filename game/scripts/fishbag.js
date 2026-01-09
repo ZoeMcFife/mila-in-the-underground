@@ -7,9 +7,9 @@ export default class FishBagInstance extends globalThis.InstanceType.FishBag
         super();
 
         // configurable params (tweak these)
-        this._radius = 80;            // orbit radius in px
+        this._radius = 100;            // orbit radius in px
         this._orbitSpeed = Math.PI;   // radians per second (Math.PI = half rotation / sec)
-        this._followSpeed = 8.0;      // how quickly the bag catches up (higher = snappier)
+        this._followSpeed = 3.0;      // how quickly the bag catches up (higher = snappier)
         this._spinOffsetDeg = 0;      // rotate the bag by this many degrees (visual spin)
         this._playerOffset = { x: 0, y: 0 }; // additional offset from player's center (px)
 
@@ -23,12 +23,16 @@ export default class FishBagInstance extends globalThis.InstanceType.FishBag
         this.FollowMovement(runtime);
         this.SetSprite();
 
-        this.setSize(64, 64);
+        this.setSize(64 + 48, 64 + 48);
     }
 
     SetSprite()
     {
         this.setAnimation(Math.min(Globals.fishCollected, 10).toString());
+
+        this._radius = 100 + Globals.fishCollected * 4;
+        this._radius = Math.PI - Globals.fishCollected * 0.2;
+        this._followSpeed = 3.0 - Globals.fishCollected * 0.2;
     }
 
     FollowMovement(runtime)
