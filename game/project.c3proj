@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 46600,
+	"savedWithRelease": 46602,
 	"name": "Mila in the Underground",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -132,7 +132,11 @@
 			"UndergroundBG",
 			"SignWell",
 			"CatEars",
-			"UmbrellaShield"
+			"UmbrellaShield",
+			"KeyCollectable",
+			"KeyItem",
+			"BossTurret",
+			"BossProjectile"
 		],
 		"subfolders": []
 	},

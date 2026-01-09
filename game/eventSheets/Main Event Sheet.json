@@ -28,6 +28,15 @@
 					"parameters": {
 						"target": "Cat"
 					}
+				},
+				{
+					"id": "add-object-to-target",
+					"objectClass": "BossTurret",
+					"sid": 287539025831177,
+					"behaviorType": "Turret",
+					"parameters": {
+						"target": "Cat"
+					}
 				}
 			],
 			"sid": 567072861494963
@@ -120,6 +129,78 @@
 				}
 			],
 			"sid": 591116348898262
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-shoot",
+					"objectClass": "BossTurret",
+					"sid": 812971926280691,
+					"behaviorType": "Turret"
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "BossTurret",
+					"sid": 533654138693161,
+					"parameters": {
+						"object": "BossProjectile",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 421912813972224
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "BossProjectile",
+					"sid": 987921485075161
+				}
+			],
+			"actions": [
+				{
+					"id": "start-timer",
+					"objectClass": "BossProjectile",
+					"sid": 111685325046649,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "5",
+						"type": "once",
+						"tag": "\"ExpireBossBullet\""
+					}
+				}
+			],
+			"sid": 450003111470272
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "BossProjectile",
+					"sid": 246822029546290,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"ExpireBossBullet\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BossProjectile",
+					"sid": 924785014565428
+				}
+			],
+			"sid": 899044943264553
 		}
 	],
 	"sid": 674151678432048
