@@ -7,6 +7,7 @@ const Globals =
     playerInstance: null,
     umbrellaUnlocked: false,
     umbrellaShieldInstance: null,
+    keyUnlocked: false,
     lastCheckpointPosition: null,
 
 

@@ -288,6 +288,14 @@
 					"script-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "keyCollectable.js",
+					"type": "application/javascript",
+					"sid": 380976381363888,
+					"script-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
