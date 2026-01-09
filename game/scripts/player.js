@@ -53,7 +53,7 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         if (this.dead)
         {
             this.setAnimation("dead");
-            return
+            return;
         }
 
         this.protectedLeft = false;
@@ -69,7 +69,7 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         if (keyboard.isKeyDown("KeyL"))
         {
             this.OnDeath();
-            return
+            return;
         }
 
         if (left) 
@@ -140,15 +140,15 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
 
         if (newState === "protect_up" || newState === "protect_up_walk")
         {
-            Globals.umbrellaShieldInstance.RotateUp()
+            Globals.umbrellaShieldInstance.RotateUp();
         }
         else if (animName === "protect_left" || animName === "protect_walk_left")
         {
-            Globals.umbrellaShieldInstance.RotateLeft()
+            Globals.umbrellaShieldInstance.RotateLeft();
         }
         else if (animName === "protect_right" || animName === "protect_walk_right")
         {
-            Globals.umbrellaShieldInstance.RotateRight()
+            Globals.umbrellaShieldInstance.RotateRight();
         }
     }
 
@@ -215,7 +215,7 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
 
         Globals.deathScreenInstance.PlayRespawnAnimation();
 
-        this.Respawn()
+        this.Respawn();
 
         this.dead = false; 
     }
@@ -228,8 +228,8 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         this.currentState = "idle";
 
         // add movement
-        this.behaviors.Platform.acceleration = this.initialSpeed
-        this.behaviors.Platform.jumpStrength = this.initialJump
+        this.behaviors.Platform.acceleration = this.initialSpeed;
+        this.behaviors.Platform.jumpStrength = this.initialJump;
     }
 
 }
