@@ -140,15 +140,15 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
 
         if (newState === "protect_up" || newState === "protect_up_walk")
         {
-            Globals.umbrellaShieldInstance.RotateUp()
+            Globals.umbrellaShieldInstance.RotateUp();
         }
         else if (animName === "protect_left" || animName === "protect_walk_left")
         {
-            Globals.umbrellaShieldInstance.RotateLeft()
+            Globals.umbrellaShieldInstance.RotateLeft();
         }
         else if (animName === "protect_right" || animName === "protect_walk_right")
         {
-            Globals.umbrellaShieldInstance.RotateRight()
+            Globals.umbrellaShieldInstance.RotateRight();
         }
     }
 
