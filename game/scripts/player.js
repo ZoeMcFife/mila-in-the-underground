@@ -172,7 +172,6 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
 
         if (isFromAbove && !this.protectedUp)
         {
-            console.log("Correct death")
             this.OnDeath();
             return;
         }
