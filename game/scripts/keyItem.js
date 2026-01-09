@@ -25,6 +25,14 @@ export default class KeyItemInstance extends globalThis.InstanceType.KeyItem
         this.setSize(64, 64);
     }
 
+    CollisionCheck()
+    {
+        if (this.testOverlap(Globals.lockInstance))
+        {
+            Globals.lockInstance.destroy();
+        }
+    }
+
     FollowMovement(runtime)
     {   
         if (Globals.keyUnlocked === false)

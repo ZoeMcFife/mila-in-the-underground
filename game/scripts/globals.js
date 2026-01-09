@@ -2,14 +2,16 @@ const Globals =
 {
     /* Collectibles */
     fishCollected: 0,
+    keyUnlocked: false,
 
     /* Player */
     playerInstance: null,
     umbrellaUnlocked: false,
     umbrellaShieldInstance: null,
-    keyUnlocked: false,
     lastCheckpointPosition: null,
 
+    /* World */
+    lockInstance: null,
 
     /* Death Screen */
     deathScreenInstance: null,

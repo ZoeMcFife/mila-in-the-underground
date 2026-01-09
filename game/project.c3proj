@@ -136,7 +136,8 @@
 			"KeyCollectable",
 			"KeyItem",
 			"BossTurret",
-			"BossProjectile"
+			"BossProjectile",
+			"Lock"
 		],
 		"subfolders": []
 	},
