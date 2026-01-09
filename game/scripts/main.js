@@ -63,6 +63,7 @@ function Tick(runtime)
 	if (runtime.layout.name === "GameOver")
 	{
 		mainStarted = false;
+		Globals.keyUnlocked = false;
 	}
 
 	if (runtime.layout.name !== "Main")
