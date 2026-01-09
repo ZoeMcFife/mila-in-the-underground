@@ -135,9 +135,6 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
             Globals.umbrellaShieldInstance.StopFollowingCat();
         }
 
-
-        console.log(animName);
-
         if (newState === "protect_up" || newState === "protect_up_walk")
         {
             Globals.umbrellaShieldInstance.RotateUp();
