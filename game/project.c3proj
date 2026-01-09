@@ -304,6 +304,14 @@
 					"script-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "bossProjectile.js",
+					"type": "application/javascript",
+					"sid": 824226643375750,
+					"script-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
