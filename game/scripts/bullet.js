@@ -20,7 +20,7 @@ export default class BulletInstance extends globalThis.InstanceType.Bullet
             this.destroy();
         }
 
-        if (this.testOverlap(Globals.umbrellaShieldInstance))
+        if (Globals.umbrellaShieldInstance && this.testOverlap(Globals.umbrellaShieldInstance))
         {
             this.destroy();
         }
