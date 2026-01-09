@@ -16,6 +16,7 @@ import FishBagInstance from "./fishbag.js";
 import TentaclesInstance from "./tentacles.js";
 import UmbrellaShieldInstance from "./umbrellaShield.js";
 import KeyCollectableInstance from "./keyCollectable.js";
+import KeyItemInstance from "./keyItem.js";
 
 runOnStartup(async runtime =>
 {
@@ -34,6 +35,7 @@ runOnStartup(async runtime =>
 	runtime.objects.Tentacles.setInstanceClass(TentaclesInstance);
 	runtime.objects.UmbrellaShield.setInstanceClass(UmbrellaShieldInstance);
 	runtime.objects.KeyCollectable.setInstanceClass(KeyCollectableInstance);
+	runtime.objects.KeyItem.setInstanceClass(KeyItemInstance);
 
 	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
@@ -81,5 +83,6 @@ function Tick(runtime)
 	runtime.objects.Tentacles.instances().forEach((ten) => ten.OnTick(runtime));
 	runtime.objects.UmbrellaShield.instances().forEach((umbShield) => umbShield.OnTick(runtime));
 	runtime.objects.KeyCollectable.instances().forEach((key) => key.OnTick(runtime));
+	runtime.objects.KeyItem.instances().forEach((key) => key.OnTick(runtime));
 }
 
