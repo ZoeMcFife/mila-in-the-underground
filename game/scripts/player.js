@@ -125,64 +125,28 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
             this.currentState = animName;
             this.setAnimation(animName);
         }
-    }
-
-    TakeDamage(attacker, isFromAbove)
-    {   
-        if (this.dead)
-        {
-            return;
-        }
-
-        /*if (!this.IsPlayerProtected())
-        {
-            this.OnDeath();
-            return;
-        }*/
-
-        if (isFromAbove && !this.protectedUp)
-        {
-            console.log("Correct death")
-            this.OnDeath();
-            return;
-        }
         
-        if (isFromAbove)
+        if (this.IsPlayerProtected())
         {
-            return;
+            Globals.umbrellaShieldInstance.FollowCat();
+        }
+        else
+        {
+            Globals.umbrellaShieldInstance.StopFollowingCat();
         }
 
-        let direction = this.CheckDamageDirection(attacker);
-
-        const unprotected =
-            (direction === this.Directions.LEFT && !this.protectedLeft) ||
-            (direction === this.Directions.RIGHT && !this.protectedRight) ||
-            (direction === this.Directions.UP && !this.protectedUp);
-
-        if (unprotected)
+        if (newState === "protect_up" || newState === "protect_up_walk")
         {
-            console.log(`Death from ${Object.keys(this.Directions).find(k => this.Directions[k] === direction)}`);
-            this.OnDeath();
+            Globals.umbrellaShieldInstance.RotateUp();
         }
-
-        /*if (damageDirection == this.Directions.LEFT && !this.protectedLeft)
-        {   
-            console.log("wronf death")
-            this.OnDeath();
-            return;
-        }
-
-        if (damageDirection == this.Directions.RIGHT && !this.protectedRight)
+        else if (animName === "protect_left" || animName === "protect_walk_left")
         {
-            this.OnDeath();
-            return;
+            Globals.umbrellaShieldInstance.RotateLeft();
         }
-
-        if (damageDirection == this.Directions.UP && !this.protectedUp)
+        else if (animName === "protect_right" || animName === "protect_walk_right")
         {
-            this.OnDeath();
-            return;
-        }*/
+            Globals.umbrellaShieldInstance.RotateRight();
+        }
     }
 
     IsPlayerProtected()
@@ -195,66 +159,27 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         return false;
     }
 
-    /*CheckDamageDirection(attacker)
-    {
-        let playerX = this.getPosition()[0];
-        let attackerX = attacker.getPosition()[0];
-
-        let playerY = this.getPosition()[1];
-        let attackerY = attacker.getPosition()[1];
-
-        if (playerY < attackerY + 64)
+    TakeDamage(attacker, isFromAbove)
+    {   
+        if (this.dead)
         {
-            return this.Directions.UP;
+            return;
         }
 
-        if (playerX > attackerX)
+
+        if (isFromAbove && !this.protectedUp)
         {
-            return this.Directions.RIGHT;
+            this.OnDeath();
+            return;
         }
-        else
+
+        if (isFromAbove && this.protectedUp)
         {
-            return this.Directions.LEFT
+            return;
         }
-    }*/
 
-    CheckDamageDirection(attacker)
-    {
-        const [playerX, playerY] = this.getPosition();
-        const [attackerX, attackerY] = attacker.getPosition();
-
-        // Adjust for origin offset if needed
-        const playerCenterY = playerY - 64; // adjust if origin at (0,64)
-        
-        const dx = attackerX - playerX;
-        const dy = attackerY - playerCenterY;
-
-        // atan2 gives angle in radians; convert to degrees
-        let angle = Math.atan2(dy, dx) * 180 / Math.PI;
-
-        // Remap so 0° = UP, clockwise
-        //angle += 90;
-        if (angle > 180) angle -= 360;  // keep in [-180,180]
-
-        console.log(angle)
-
-        let up_angle = 25;
-        let right_angle = 180 - up_angle;
-
-        // Map angle to direction
-        if (angle > -up_angle && angle <= up_angle)       // UP
-            return this.Directions.UP;
-        else if (angle > up_angle && angle <= right_angle)  // RIGHT
-            return this.Directions.RIGHT;
-        else if (angle <= -up_angle && angle > -right_angle) // LEFT
-            return this.Directions.LEFT;
-        else                                  // DOWN
-            return this.Directions.DOWN;
+        this.OnDeath();
     }
-
-
-
-
 
     async OnDeath()
     {
@@ -290,6 +215,7 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
 
         this.dead = false; 
     }
+
 
     Respawn()
     {
