@@ -21,6 +21,7 @@ export default class KeyItemInstance extends globalThis.InstanceType.KeyItem
     OnTick(runtime)
     {
         this.FollowMovement(runtime);
+        this.CollisionCheck();
 
         this.setSize(64, 64);
     }
