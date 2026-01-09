@@ -96,7 +96,7 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
             {
                 this.protectedLeft = true;
             }
-            else 
+            else
             {
                 this.protectedRight = true;
             }
