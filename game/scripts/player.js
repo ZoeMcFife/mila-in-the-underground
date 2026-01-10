@@ -190,6 +190,8 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
 
         this.dead = true;
 
+        Globals.umbrellaShieldInstance.StopFollowingCat();
+
         // remove movement
         this.behaviors.Platform.acceleration = 0;
         this.behaviors.Platform.jumpStrength = 0;

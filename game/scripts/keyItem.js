@@ -31,6 +31,7 @@ export default class KeyItemInstance extends globalThis.InstanceType.KeyItem
         if (this.testOverlap(Globals.lockInstance))
         {
             Globals.lockInstance.destroy();
+            this.destroy();
         }
     }
 
