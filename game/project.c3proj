@@ -137,7 +137,8 @@
 			"KeyItem",
 			"BossTurret",
 			"BossProjectile",
-			"Lock"
+			"Lock",
+			"Boss"
 		],
 		"subfolders": []
 	},
