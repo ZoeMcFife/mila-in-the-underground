@@ -46,7 +46,7 @@ export default class BossInstance extends globalThis.InstanceType.Boss
         this.setAnimation("Explode");
         this.setSize(300, 300);
         this.isDead = true;
-
+        Globals.bossDefeated = true;
     }
 
     Movement(runtime)

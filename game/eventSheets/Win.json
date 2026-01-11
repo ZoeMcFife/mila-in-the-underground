@@ -1,0 +1,88 @@
+{
+	"name": "Win",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 828114754747105
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "IntroTransistion",
+					"sid": 551078196246409
+				}
+			],
+			"sid": 722217746235087
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 554733833527604,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 826871458849172,
+					"parameters": {
+						"object": "Fish"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "StartTransistion",
+					"sid": 729121251015926
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 661189626435822,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "2",
+						"type": "once",
+						"tag": "\"CreditExitFinished\""
+					}
+				}
+			],
+			"sid": 131760745241309
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 766763678733366,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"CreditExitFinished\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 276722518319565,
+					"parameters": {
+						"layout": "MainMenu"
+					}
+				}
+			],
+			"sid": 702797092875382
+		}
+	],
+	"sid": 750394992766023
+}

@@ -155,7 +155,8 @@
 			"Test",
 			"GameOver",
 			"Credits",
-			"MainMenu"
+			"MainMenu",
+			"Win"
 		],
 		"subfolders": []
 	},
@@ -164,7 +165,8 @@
 			"Main Event Sheet",
 			"MainMenu Event Sheet",
 			"Credits Event Sheet",
-			"Game Over Event Sheet"
+			"Game Over Event Sheet",
+			"Win"
 		],
 		"subfolders": []
 	},
