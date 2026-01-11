@@ -161,6 +161,11 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
 
     TakeDamage(attacker, isFromAbove)
     {   
+        if (Globals.bossDefeated)
+        {
+            return;
+        }
+
         if (this.dead)
         {
             return;

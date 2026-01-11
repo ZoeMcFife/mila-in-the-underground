@@ -154708,8 +154708,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 7488,
-						"y": 5632,
+						"x": 8512,
+						"y": 4800,
 						"width": 64,
 						"height": 64,
 						"originX": 0,
@@ -580606,8 +580606,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 7872,
-						"y": 4608,
+						"x": 7040,
+						"y": 4672,
 						"width": 64,
 						"height": 128,
 						"originX": 0,
@@ -584517,12 +584517,63 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 7488,
-						"y": 5504,
+						"x": 8448,
+						"y": 4672,
 						"width": 64,
 						"height": 64,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BossTurret",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 138,
+					"sid": 432510410335844,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Turret": {
+							"properties": {
+								"range": 900,
+								"rate-of-fire": 1.5,
+								"rotate": true,
+								"rotate-speed": 140,
+								"target-mode": "first-in-range",
+								"predictive-aim": true,
+								"projectile-speed": 500,
+								"use-collision-cells": true,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 432510410335844,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 8128,
+						"y": 4480,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

@@ -61,6 +61,7 @@ function Tick(runtime)
 		Globals.lastCheckpointPosition = runtime.objects.Cat.getFirstInstance().getPosition();
 		Globals.umbrellaShieldInstance = runtime.objects.UmbrellaShield.getFirstInstance();
 		Globals.lockInstance = runtime.objects.Lock.getFirstInstance();
+		Globals.bossInstance = runtime.objects.Boss.getFirstInstance();
 
 		mainStarted = true;
 	}

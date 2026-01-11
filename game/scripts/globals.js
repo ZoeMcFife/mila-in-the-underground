@@ -3,6 +3,7 @@ const Globals =
     /* Collectibles */
     fishCollected: 0,
     keyUnlocked: false,
+    bossDefeated: false,
 
     /* Player */
     playerInstance: null,
@@ -12,6 +13,7 @@ const Globals =
 
     /* World */
     lockInstance: null,
+    bossInstance: null,
 
     /* Death Screen */
     deathScreenInstance: null,

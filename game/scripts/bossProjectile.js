@@ -5,6 +5,8 @@ export default class BossProjectileInstance extends globalThis.InstanceType.Boss
     constructor()
     {
         super();
+        this.superCharged = false;
+        this.damagedBoss = false;
     }
 
     OnTick(runtime)
@@ -14,7 +16,7 @@ export default class BossProjectileInstance extends globalThis.InstanceType.Boss
 
     CollisionCheck()
     {
-        if (this.testOverlap(Globals.playerInstance))
+        if (this.testOverlap(Globals.playerInstance) && !this.damagedBoss)
         {
             Globals.playerInstance.TakeDamage(this, false);
             this.destroy();
@@ -23,11 +25,24 @@ export default class BossProjectileInstance extends globalThis.InstanceType.Boss
         if (Globals.umbrellaShieldInstance && this.testOverlap(Globals.umbrellaShieldInstance))
         {
             this.setAnimation("Supercharged");
+            this.superCharged = true;
 
             const bulletBehavior = this.behaviors.Bullet;
             bulletBehavior.angleOfMotion = -90;
 
-            // Optional: speed boost for extra punch
-            bulletBehavior.speed *= 1.5;           }
+            bulletBehavior.speed *= 1.5;           
+        }
+
+        if (this.superCharged && !this.damagedBoss)
+        {
+            if (Globals.bossInstance && this.testOverlap(Globals.bossInstance))
+            {
+                this.setAnimation("Explode");
+                Globals.bossInstance.TakeDamage();
+                const bulletBehavior = this.behaviors.Bullet;
+                bulletBehavior.speed = 0;
+                this.damagedBoss = true;
+            }
+        }
     }
 }
