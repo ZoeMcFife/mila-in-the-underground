@@ -314,6 +314,14 @@
 					"script-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "boss.js",
+					"type": "application/javascript",
+					"sid": 993608806479640,
+					"script-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []

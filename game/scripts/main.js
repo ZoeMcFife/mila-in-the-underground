@@ -18,6 +18,7 @@ import UmbrellaShieldInstance from "./umbrellaShield.js";
 import KeyCollectableInstance from "./keyCollectable.js";
 import KeyItemInstance from "./keyItem.js";
 import BossProjectileInstance from "./bossProjectile.js";
+import BossInstance from "./boss.js";
 
 runOnStartup(async runtime =>
 {
@@ -38,6 +39,7 @@ runOnStartup(async runtime =>
 	runtime.objects.KeyCollectable.setInstanceClass(KeyCollectableInstance);
 	runtime.objects.KeyItem.setInstanceClass(KeyItemInstance);
 	runtime.objects.BossProjectile.setInstanceClass(BossProjectileInstance);
+	runtime.objects.Boss.setInstanceClass(BossInstance);
 
 	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
@@ -89,5 +91,6 @@ function Tick(runtime)
 	runtime.objects.KeyCollectable.instances().forEach((key) => key.OnTick(runtime));
 	runtime.objects.KeyItem.instances().forEach((key) => key.OnTick(runtime));
 	runtime.objects.BossProjectile.instances().forEach((bullet) => bullet.OnTick(runtime));
+	runtime.objects.Boss.instances().forEach((b) => b.OnTick(runtime));
 }
 
