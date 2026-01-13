@@ -138,7 +138,10 @@
 			"BossTurret",
 			"BossProjectile",
 			"Lock",
-			"Boss"
+			"Boss",
+			"WinBackground",
+			"WinText",
+			"BakButton"
 		],
 		"subfolders": []
 	},
