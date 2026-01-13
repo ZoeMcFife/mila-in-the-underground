@@ -14,6 +14,17 @@
 				{
 					"callFunction": "IntroTransistion",
 					"sid": 389625396634088
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 990980322500899,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "3",
+						"type": "once",
+						"tag": "\"PlayBak\""
+					}
 				}
 			],
 			"sid": 749070010913931
@@ -33,9 +44,9 @@
 				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Mouse",
-					"sid": 672671756353136,
+					"sid": 191053801228610,
 					"parameters": {
-						"object": "Fish"
+						"object": "BakButton"
 					}
 				}
 			],
@@ -47,10 +58,10 @@
 				{
 					"id": "start-timer",
 					"objectClass": "Transistion",
-					"sid": 135698145999512,
+					"sid": 714040729530996,
 					"behaviorType": "Timer",
 					"parameters": {
-						"duration": "1.5",
+						"duration": "2",
 						"type": "once",
 						"tag": "\"CreditExitFinished\""
 					}
@@ -82,6 +93,32 @@
 				}
 			],
 			"sid": 657512473649292
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 903264479938656,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"PlayBak\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "BakButton",
+					"sid": 392015923228441,
+					"parameters": {
+						"animation": "\"Play\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 877902352877618
 		}
 	],
 	"sid": 686231110149995

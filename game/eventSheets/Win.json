@@ -18,10 +18,10 @@
 				{
 					"id": "start-timer",
 					"objectClass": "Transistion",
-					"sid": 872453091424918,
+					"sid": 401359913677887,
 					"behaviorType": "Timer",
 					"parameters": {
-						"duration": "3",
+						"duration": "8",
 						"type": "once",
 						"tag": "\"PlayBak\""
 					}
