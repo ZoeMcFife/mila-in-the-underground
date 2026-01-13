@@ -1,0 +1,134 @@
+{
+	"name": "Win",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 828114754747105
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "IntroTransistion",
+					"sid": 551078196246409
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 401359913677887,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "8",
+						"type": "once",
+						"tag": "\"PlayBak\""
+					}
+				}
+			],
+			"sid": 722217746235087
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 554733833527604,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 563012288585214,
+					"parameters": {
+						"object": "BakButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "StartTransistion",
+					"sid": 729121251015926
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Transistion",
+					"sid": 661189626435822,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "2",
+						"type": "once",
+						"tag": "\"CreditExitFinished\""
+					}
+				}
+			],
+			"sid": 131760745241309
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 766763678733366,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"CreditExitFinished\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 276722518319565,
+					"parameters": {
+						"layout": "MainMenu"
+					}
+				}
+			],
+			"sid": 702797092875382
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Transistion",
+					"sid": 990832577160451,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"PlayBak\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "BakButton",
+					"sid": 210963231194365,
+					"parameters": {
+						"animation": "\"Play\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "WinText",
+					"sid": 721829249329570,
+					"parameters": {
+						"animation": "\"Play\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 756843649265635
+		}
+	],
+	"sid": 750394992766023
+}

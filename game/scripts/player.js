@@ -20,6 +20,7 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         this.noLivesLeft = false;
 
         this.fullyDead = false;
+        this.bossFullyDefeated = false; // what are these variable names??? wtf
 
         this.Directions = 
         {
@@ -45,6 +46,15 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
             runtime.objects.Transistion.getFirstInstance().setAnimation("Start");
             await new Promise(resolve => setTimeout(resolve, 5000));
             runtime.goToLayout("GameOver");
+        }
+
+        if (Globals.bossDefeated && !this.bossFullyDefeated)
+        {
+            this.bossFullyDefeated = true;
+            await new Promise(resolve => setTimeout(resolve, 5000));
+            runtime.objects.Transistion.getFirstInstance().setAnimation("Start");
+            await new Promise(resolve => setTimeout(resolve, 5000));
+            runtime.goToLayout("Win");
         }
     }
 
@@ -161,6 +171,11 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
 
     TakeDamage(attacker, isFromAbove)
     {   
+        if (Globals.bossDefeated)
+        {
+            return;
+        }
+
         if (this.dead)
         {
             return;
@@ -189,6 +204,8 @@ export default class PlayerInstance extends globalThis.InstanceType.Cat
         }
 
         this.dead = true;
+
+        Globals.umbrellaShieldInstance.StopFollowingCat();
 
         // remove movement
         this.behaviors.Platform.acceleration = 0;

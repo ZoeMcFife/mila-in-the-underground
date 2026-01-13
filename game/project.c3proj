@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 46600,
+	"savedWithRelease": 46602,
 	"name": "Mila in the Underground",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -132,7 +132,17 @@
 			"UndergroundBG",
 			"SignWell",
 			"CatEars",
-			"UmbrellaShield"
+			"UmbrellaShield",
+			"KeyCollectable",
+			"KeyItem",
+			"BossTurret",
+			"BossProjectile",
+			"Lock",
+			"Boss",
+			"WinBackground",
+			"WinText",
+			"BakButton",
+			"The__squad_logo_rev"
 		],
 		"subfolders": []
 	},
@@ -149,7 +159,8 @@
 			"Test",
 			"GameOver",
 			"Credits",
-			"MainMenu"
+			"MainMenu",
+			"Win"
 		],
 		"subfolders": []
 	},
@@ -158,7 +169,8 @@
 			"Main Event Sheet",
 			"MainMenu Event Sheet",
 			"Credits Event Sheet",
-			"Game Over Event Sheet"
+			"Game Over Event Sheet",
+			"Win"
 		],
 		"subfolders": []
 	},
@@ -281,6 +293,38 @@
 					"name": "umbrellaShield.js",
 					"type": "application/javascript",
 					"sid": 648879244269333,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "keyCollectable.js",
+					"type": "application/javascript",
+					"sid": 380976381363888,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "keyItem.js",
+					"type": "application/javascript",
+					"sid": 723120230883857,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bossProjectile.js",
+					"type": "application/javascript",
+					"sid": 824226643375750,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "boss.js",
+					"type": "application/javascript",
+					"sid": 993608806479640,
 					"script-info": {
 						"purpose": "none"
 					}
