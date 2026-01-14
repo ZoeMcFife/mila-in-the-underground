@@ -14,7 +14,7 @@ export default class BossInstance extends globalThis.InstanceType.Boss
         this.verticalSpeed = 0.02;
         this.direction = 1;
 
-        this.health = 1;
+        this.health = 3;
         this.isDead = false;
     }
 
