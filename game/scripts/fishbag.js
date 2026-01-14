@@ -30,9 +30,9 @@ export default class FishBagInstance extends globalThis.InstanceType.FishBag
     {
         this.setAnimation(Math.min(Globals.fishCollected, 10).toString());
 
-        this._radius = 100 + Globals.fishCollected * 4;
-        this._orbitSpeed = Math.PI - Globals.fishCollected * 0.2;
-        this._followSpeed = 3.0 - Globals.fishCollected * 0.2;
+        this._radius = 100 + Math.min(Globals.fishCollected, 12) * 4;
+        this._orbitSpeed = Math.PI - Math.min(Globals.fishCollected, 12) * 0.2;
+        this._followSpeed = 3.0 - Math.min(Globals.fishCollected, 12) * 0.2;
     }
 
     FollowMovement(runtime)

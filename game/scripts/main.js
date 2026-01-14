@@ -66,10 +66,11 @@ function Tick(runtime)
 		mainStarted = true;
 	}
 
-	if (runtime.layout.name === "GameOver")
+	if (runtime.layout.name === "GameOver" || runtime.layout.name === "Win")
 	{
 		mainStarted = false;
 		Globals.keyUnlocked = false;
+		Globals.bossDefeated = false;
 	}
 
 	if (runtime.layout.name !== "Main")

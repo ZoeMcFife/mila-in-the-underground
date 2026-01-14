@@ -9,14 +9,14 @@
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Tastatur",
+			"name": "Keyboard",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Mouse",
-			"name": "Maus",
+			"name": "Mouse",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -37,56 +37,56 @@
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Gekachelter Hintergrund",
+			"name": "Tiled Background",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Anchor",
-			"name": "Anker",
+			"name": "Anchor",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Kugel",
+			"name": "Bullet",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Platform",
-			"name": "Plattform",
+			"name": "Platform",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Timer",
-			"name": "Stoppuhr",
+			"name": "Timer",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Turret",
-			"name": "Geschützturm",
+			"name": "Turret",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "scrollto",
-			"name": "Scrolle zu",
+			"name": "Scroll To",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Festkörper",
+			"name": "Solid",
 			"author": "Scirra",
 			"bundled": false
 		}
