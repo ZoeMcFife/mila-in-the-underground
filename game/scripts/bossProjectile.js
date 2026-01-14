@@ -28,7 +28,7 @@ export default class BossProjectileInstance extends globalThis.InstanceType.Boss
             this.superCharged = true;
 
             const bulletBehavior = this.behaviors.Bullet;
-            bulletBehavior.angleOfMotion = -90;
+            bulletBehavior.angleOfMotion = -45;
 
             bulletBehavior.speed *= 1.5;           
         }
