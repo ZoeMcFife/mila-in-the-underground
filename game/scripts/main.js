@@ -14,6 +14,11 @@ import CollectableInstance from "./collectable.js";
 import UiInstance from "./ui.js";
 import FishBagInstance from "./fishbag.js";
 import TentaclesInstance from "./tentacles.js";
+import UmbrellaShieldInstance from "./umbrellaShield.js";
+import KeyCollectableInstance from "./keyCollectable.js";
+import KeyItemInstance from "./keyItem.js";
+import BossProjectileInstance from "./bossProjectile.js";
+import BossInstance from "./boss.js";
 
 runOnStartup(async runtime =>
 {
@@ -30,6 +35,11 @@ runOnStartup(async runtime =>
 	runtime.objects.Text.setInstanceClass(UiInstance);
 	runtime.objects.FishBag.setInstanceClass(FishBagInstance);
 	runtime.objects.Tentacles.setInstanceClass(TentaclesInstance);
+	runtime.objects.UmbrellaShield.setInstanceClass(UmbrellaShieldInstance);
+	runtime.objects.KeyCollectable.setInstanceClass(KeyCollectableInstance);
+	runtime.objects.KeyItem.setInstanceClass(KeyItemInstance);
+	runtime.objects.BossProjectile.setInstanceClass(BossProjectileInstance);
+	runtime.objects.Boss.setInstanceClass(BossInstance);
 
 	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
@@ -49,13 +59,18 @@ function Tick(runtime)
 		Globals.playerInstance = runtime.objects.Cat.getFirstInstance();
 		Globals.deathScreenInstance = runtime.objects.DeathScreen.getFirstInstance();
 		Globals.lastCheckpointPosition = runtime.objects.Cat.getFirstInstance().getPosition();
+		Globals.umbrellaShieldInstance = runtime.objects.UmbrellaShield.getFirstInstance();
+		Globals.lockInstance = runtime.objects.Lock.getFirstInstance();
+		Globals.bossInstance = runtime.objects.Boss.getFirstInstance();
 
 		mainStarted = true;
 	}
 
-	if (runtime.layout.name === "GameOver")
+	if (runtime.layout.name === "GameOver" || runtime.layout.name === "Win")
 	{
 		mainStarted = false;
+		Globals.keyUnlocked = false;
+		Globals.bossDefeated = false;
 	}
 
 	if (runtime.layout.name !== "Main")
@@ -74,5 +89,10 @@ function Tick(runtime)
 	runtime.objects.Text.instances().forEach((text) => text.OnTick(runtime));
 	runtime.objects.FishBag.instances().forEach((fishBag) => fishBag.OnTick(runtime));
 	runtime.objects.Tentacles.instances().forEach((ten) => ten.OnTick(runtime));
+	runtime.objects.UmbrellaShield.instances().forEach((umbShield) => umbShield.OnTick(runtime));
+	runtime.objects.KeyCollectable.instances().forEach((key) => key.OnTick(runtime));
+	runtime.objects.KeyItem.instances().forEach((key) => key.OnTick(runtime));
+	runtime.objects.BossProjectile.instances().forEach((bullet) => bullet.OnTick(runtime));
+	runtime.objects.Boss.instances().forEach((b) => b.OnTick(runtime));
 }
 
